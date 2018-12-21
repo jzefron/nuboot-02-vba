@@ -5,8 +5,8 @@ For Each wb In Workbooks
     'look for the stock data
     If wb.Name Like "*_stock_data.xlsx" Or wb.Name = "alphabtical_testing.xlsx" Then
 
-        Debug.Print wb.Worksheets(1).Name
-        With wb.Worksheets(1) 'don't like typing wb all the time
+   For Each ws In wb.Worksheets
+        With ws 'don't like typing wb all the time
         
         'wb.Activate
         
@@ -77,6 +77,7 @@ For Each wb In Workbooks
         .Range("p1:p2").NumberFormat = "0.00%"
         .Range("p3") = maxVol
     End With
+    next    
     End If ' end stock data
     
 Next ' next work book
