@@ -77,7 +77,7 @@ For Each wb In Workbooks
         .Range("p1:p2").NumberFormat = "0.00%"
         .Range("p3") = maxVol
     End With
-    next    
+    Next    'new work sheet
     End If ' end stock data
     
 Next ' next work book
