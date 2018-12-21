@@ -3,7 +3,8 @@ Sub gather()
 'loop through all open workbooks
 For Each wb In Workbooks
     'look for the stock data
-    If wb.Name Like "*_stock_data.xlsx" Then
+    If wb.Name Like "*_stock_data.xlsx" Or wb.Name = "alphabtical_testing.xlsx" Then
+
         Debug.Print wb.Worksheets(1).Name
         With wb.Worksheets(1) 'don't like typing wb all the time
         
